@@ -14,13 +14,29 @@ const HomeScreen = ({navigation}) => {
 				<TouchableOpacity style={styles.buttonStyle}>
 					<Button onPress={() => navigation.navigate('Work')} title='Work' />
 					<Button onPress={() => navigation.navigate('About')} title='About' />
-					<Button onPress={() => navigation.navigate('Counter')} title='Counter Screen' />
+					<Button
+						onPress={() => navigation.navigate('Counter')}
+						title='Counter Screen'
+					/>
+
+					<Button
+						onPress={() => navigation.navigate('Text')}
+						title='Text Screen'
+					/>
+					<Button
+						onPress={() => navigation.navigate('Books')}
+						title='Recommended Reading'
+					/>
+					<Button
+						onPress={() => navigation.navigate('Education')}
+						title='Education'
+					/>
 				</TouchableOpacity>
 				<Image
 					style={styles.heroImage}
 					source={require('../../assets/CHSM/hero.jpg')}
 				/>
-        <Kids />
+				<Kids />
 			</ScrollView>
 		</View>
 	);

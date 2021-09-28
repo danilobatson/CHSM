@@ -4,18 +4,24 @@ import HomeScreen from "./src/screens/HomeScreen";
 import Work from "./src/screens/Work";
 import About from "./src/screens/About";
 import CounterScreen from "./src/screens/CounterScreen"
+import TextScreen from "./src/screens/TextScreen";
+import Books from './src/screens/Books'
+import Education from './src/screens/Education';
 
 const navigator = createStackNavigator(
 	{
 		Home: HomeScreen,
 		About: About,
-    Work: Work,
-    Counter: CounterScreen,
+		Work: Work,
+		Counter: CounterScreen,
+		Text: TextScreen,
+		Books: Books,
+		Education: Education,
 	},
 	{
 		initialRouteName: 'Home',
 		defaultNavigationOptions: {
-			title: 'Courtnie Dowdy Won\'t He Will App',
+			title: "Courtnie Dowdy Won't He Will App",
 		},
 	}
 );

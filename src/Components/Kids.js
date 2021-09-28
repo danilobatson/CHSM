@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
 import { useState } from 'react';
 
 const Kids = () => {
@@ -26,6 +26,10 @@ const Kids = () => {
 					style={
 						styles.text
 					}>{`${random} Kids, Courtnie Will Have ${random} Kids`}</Text>
+					<Image
+						style={styles.heroImage}
+						source={require('../../assets/CHSM/desert-wild.png')}
+					/>
 			</View>
 		);
 	}
@@ -56,5 +60,10 @@ const styles = StyleSheet.create({
 		margin: 20,
 		textAlign: 'center',
 		fontSize: 30,
+	},
+	heroImage: {
+		width: 350,
+		height: 350,
+		alignSelf: 'center',
 	},
 });
