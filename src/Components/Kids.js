@@ -25,7 +25,7 @@ const Kids = () => {
 				<Text
 					style={
 						styles.text
-					}>{`${random} Kids, Courntie Will Have ${random} Kids`}</Text>
+					}>{`${random} Kids, Courtnie Will Have ${random} Kids`}</Text>
 			</View>
 		);
 	}

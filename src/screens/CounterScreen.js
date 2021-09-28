@@ -1,9 +1,27 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, TouchableOpacity, FlatList, ScrollView } from 'react-native'
-import { useState } from 'react'
+import { useState, useReducer } from 'react'
+
+const reducer = (state, action) => {
+	//state === {count: someNumber}
+	//action === {type: 'increment' || 'decrement', payload: 1}
+
+	switch(action.type) {
+		case 'increment':
+			return {...state, count: state.count + action.payload}
+		case 'decrement':
+			return {...state, count: state.count - action.payload}
+		default:
+			return state
+	}
+}
 const CounterScreen = () => {
   //STATE LOGIC
-  const [count, setCount] = useState(0);
+	const [state, dispatch] = useReducer(reducer, {count: 0})
+	const {count} = state 
+
+
+
   const [color, setColor] = useState([])
 
   //RANDOM COLOR LOGIC
@@ -18,8 +36,8 @@ const CounterScreen = () => {
 		<View>
 				<TouchableOpacity>
 					{/* COUNTER UI */}
-					<Button onPress={() => setCount(count + 1)} title='Increment' />
-					<Button onPress={() => setCount(count - 1)} title='Decrement' />
+					<Button onPress={() => dispatch({type: 'increment', payload: 1}) } title='Increment' />
+					<Button onPress={() => dispatch({type: 'decrement', payload: 1}) } title='Decrement' />
 					<Text>The count is: {count}</Text>
 
 					{/* COLOR UI */}
