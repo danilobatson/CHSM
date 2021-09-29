@@ -61,24 +61,25 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
 	text: {
 		fontSize: 40,
-    fontWeight: '700',
+		fontWeight: '700',
 		textAlign: 'center',
 		margin: 20,
 	},
 	screen: {
 		backgroundColor: '#e2f2e9',
 	},
-  heroImage:{
-    width: 350,
-    height: 350,
-    alignSelf: 'center'
-  },
-  buttonStyle:{
-    marginVertical: 20,
-  },
+	heroImage: {
+		width: 350,
+		height: 350,
+		alignSelf: 'center',
+		borderRadius: 10,
+	},
+	buttonStyle: {
+		marginVertical: 20,
+	},
 	buttons: {
-		marginVertical: 10
-	}
+		marginVertical: 10,
+	},
 });
 
 export default HomeScreen;
