@@ -12,14 +12,24 @@ const HomeScreen = ({navigation}) => {
 			<ScrollView>
 				<Text style={styles.text}>Courtnie Dowdy Ministry </Text>
 				<TouchableOpacity style={styles.buttonStyle}>
-					<Button onPress={() => navigation.navigate('Work')} title='Work' />
-					<Button onPress={() => navigation.navigate('About')} title='About' />
 					<Button
+						style={styles.button}
+						onPress={() => navigation.navigate('Work')}
+						title='Work'
+					/>
+					<Button
+						style={styles.button}
+						onPress={() => navigation.navigate('About')}
+						title='About'
+					/>
+					<Button
+						style={styles.button}
 						onPress={() => navigation.navigate('Counter')}
 						title='Counter Screen'
 					/>
 
 					<Button
+						style={styles.button}
 						onPress={() => navigation.navigate('Text')}
 						title='Text Screen'
 					/>
@@ -28,8 +38,14 @@ const HomeScreen = ({navigation}) => {
 						title='Recommended Reading'
 					/>
 					<Button
+						style={styles.button}
 						onPress={() => navigation.navigate('Education')}
 						title='Education'
+					/>
+					<Button
+						style={styles.button}
+						onPress={() => navigation.navigate('Food')}
+						title='Food'
 					/>
 				</TouchableOpacity>
 				<Image
@@ -59,7 +75,10 @@ const styles = StyleSheet.create({
   },
   buttonStyle:{
     marginVertical: 20,
-  }
+  },
+	buttons: {
+		marginVertical: 10
+	}
 });
 
 export default HomeScreen;
