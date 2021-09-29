@@ -24,9 +24,9 @@ export default () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	searchApi('bbq');
-	// }, []);
+	useEffect(() => {
+		searchApi('Sushi');
+	}, []);
 
 return [searchApi, businesses, errorMessage, name, setName];
 }

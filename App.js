@@ -8,6 +8,7 @@ import TextScreen from "./src/screens/TextScreen";
 import Books from './src/screens/Books'
 import Education from './src/screens/Education';
 import Food from './src/screens/Food'
+import ResultsShowScreen from "./src/screens/ResultsShowScreen";
 
 const navigator = createStackNavigator(
 	{
@@ -18,7 +19,8 @@ const navigator = createStackNavigator(
 		Text: TextScreen,
 		Books: Books,
 		Education: Education,
-		Food : Food
+		Food : Food,
+		Results: ResultsShowScreen
 	},
 	{
 		initialRouteName: 'Home',

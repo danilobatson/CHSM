@@ -20,13 +20,22 @@ const Food = () => {
 			<Text style={styles.heading}>Food Screen</Text>
 			<SearchBar name={name} onChangeText={setName} onSubmit={searchApi} />
 			{errorMessage ? <Text>{errorMessage}</Text> : null}
-			<Text style={{marginLeft: 20, marginVertical: 10}}></Text>
+			<Text style={{ marginLeft: 20, marginVertical: 10 }}></Text>
 			<ScrollView>
-      <ResultsList results={filterByPrice('$')} title='Cost Effective' />
-			<ResultsList results={filterByPrice('$$')} title='Little Pricy' />
-			<ResultsList results={filterByPrice('$$$')} title='Oh You Got Money!' />
-      </ScrollView>
-    </>
+				<ResultsList
+					results={filterByPrice('$')}
+					title='Cost Effective'
+				/>
+				<ResultsList
+					results={filterByPrice('$$')}
+					title='Little Pricy'
+				/>
+				<ResultsList
+					results={filterByPrice('$$$')}
+					title='Oh You Got Money!'
+				/>
+			</ScrollView>
+		</>
 	);
 };
 
